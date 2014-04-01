@@ -1,0 +1,60 @@
+\input{files/s-header}
+\input{files/s-title}
+
+\begin{document}
+\input{files/s-titlepage}\doublespacing
+\thispagestyle{empty}\vspace{-2.5cm}
+
+\noindent Computer-assisted analysis is an exciting and fruitful part of economic research. It is highly demanding as it requires skills in economic modeling, data management, and computational methods. The credibility and further progress of the field depend on the transparency of implementations and recomputability of results. Basic software engineering skills can help achieve these goals.
+
+\begin{itemize}
+\item Version Control
+\item Unit Testing
+\item Debugging and Profiling
+\item Code Documentation
+\item Design Patterns
+\item Automation of Workflows
+\end{itemize}
+
+\noindent After mastering basic programming and software engineering skills, economists can more readily incorporate research from computer science and engineering and apply them to answer important economic questions.\newline
+
+\noindent I intend to provide students with a brief introduction of how these tools can be useful in their own economic research. Please check out the accompanying website for additional material:
+\begin{center}
+\url{http://www.policy-lab.org/teaching/soft-engineering}.
+\end{center}
+I will continuously update the material during the semester.
+%-------------------------------------------------------------------------------
+\subsection*{$1^{st}$ Week} 
+%-------------------------------------------------------------------------------
+I will provide a basic overview on ``Best Practices for Scientific Computing'' \citep{Wilson.2014}. I discuss how these apply to research in economics and what tools can help to adhere to them in the research workflow. I will briefly present an example from my own ongoing research, where I try to adhere to these practices: 
+\begin{center}
+\url{http://www.policy-lab.org/cb-analysis}.
+\end{center}
+However, we will spend the main part of the session exploring the version control system \href{http://git-scm.com/}{\textit{Git}} and the web-based hosting service \href{https://github.com/}{\textit{GitHub}}. Please make sure to work through the \href{https://help.github.com/categories/54/articles}{\textit{GitHub Bootcamp}} and follow the instructions to install \href{http://git-scm.com/}{\textit{Git}} prior to class.
+%-------------------------------------------------------------------------------
+\subsection*{$10^{th}$ Week} 
+%-------------------------------------------------------------------------------
+In the final meeting of the semester, we will explore two additional topics in more detail: (1) Unit Testing and (2) Debugging and Profiling. I will illustrate their usefulness on the code base developed during the previous weeks of the colloquium. I conclude with some remarks on what next steps you can take to further improve your software engineering skills. This will allow you to implement meaningful economic models and tackle important economic questions in a reproducible and reliable way.\\\newline
+%-------------------------------------------------------------------------------
+% Wrapping up.
+%-------------------------------------------------------------------------------
+\noindent If you have any further comments, questions, or suggestions, please contact me at \href{mailto: eisenhauer@policy-lab.org}{eisenhauer@policy-lab.org}.
+
+\newpage\bibliography{../../../ext/bib/literature}
+\bibliographystyle{apalike}
+
+
+\section*{Links}\vspace{0.5cm}
+
+\begin{tabular}{ll}
+\textit{Git}    & \url{http://git-scm.com}\\ [1ex]
+\textit{GitHub} & \url{https://github.com}\\ [1ex]
+\textit{GitHub Bootcamp} & \url{https://help.github.com/categories/54/articles}\\ [1ex]
+\end{tabular}
+
+\nocite{Wilson.2014,Eisenhauer.2014}
+
+
+
+
+\end{document}

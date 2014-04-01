@@ -1,0 +1,154 @@
+\documentclass{beamer} % Gliederung im Kopf, sections und subsections
+\renewcommand{\baselinestretch}{1.3}\normalsize	
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{} 	
+%\usepackage{beamerthemesplit}
+%\useoutertheme[subsection=false]{smoothbars}
+%\usepackage[final]{pdfpages}
+\usepackage{bibentry}	
+\usepackage{bm}	
+\usepackage{graphicx}	
+\usepackage{relsize}
+\usepackage[round,longnamesfirst]{natbib}
+\usepackage{bm}																									%matrix symbol
+\usepackage{verbatim}
+\usepackage{setspace}																					%Fuﬂnoten (allgm.
+\usepackage{hyperref}		
+\hypersetup{colorlinks=true,urlcolor=darkblue}														%Zeilenabst‰nde)
+\usepackage{threeparttable}
+
+\usepackage{epstopdf}
+\usepackage{lscape}																							%Querformat
+\usepackage[latin1]{inputenc}																		%Umlaute
+\usepackage{graphicx}
+%\graphicspath{{../shared-files/}}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{uarial}
+
+\usepackage{tabularx}
+\usepackage{fancybox}																						%Boxen und Rahmen
+\usepackage{appendix}
+\usepackage{enumerate}
+\usepackage{eurofont}	
+%EURO Symbol	
+\usepackage{tabularx}
+\usepackage{longtable}																					%Mehrseitige Tabellen
+\usepackage[T1]{fontenc}
+\usepackage{color,colortbl}																			%Farbige Tabellen
+\usepackage{threeparttable}
+\usepackage{hyperref}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,chains,fit,calc,matrix,decorations.pathreplacing}
+\usepackage{xcolor}
+\usetikzlibrary{intersections}
+
+
+%\usepackage{cmbright}
+\def\newblock{\hskip .11em plus .33em minus .07em}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\cov}{\mathrm{cov}\thin}
+\newcommand{\thin}{\thinspace}
+\newcommand{\thick}{\thickspace}
+
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\myfrac}[3][0pt]{\genfrac{}{}{}{}{\raisebox{#1}{$#2$}}{\raisebox{-#1}{$#3$}}}
+\newcommand{\U}{\mathrm{U}}	%Uniform Distribution
+\newcommand{\D}{\mathrm{D}}	%Dirichlet Distribution
+\newcommand{\W}{\mathrm{W}}	%Wishart Distribution
+\newcommand{\E}{\mbox{E}}		%Expectation
+\newcommand{\Prob}{\mbox{Pr}}		%Expectation
+\newcommand{\Iden}{\mathbb{I}}	%Identity Matrix
+\newcommand{\Ind}{\mathbb{\mathrm{I}}}	%Indicator Function
+\newcommand{\argmax}{\mathrm{argmax}\thin}
+\newcommand{\Tau}{\mathcal{T}\thin}
+
+\newcommand{\var}{\mathrm{var}\thin}
+\newcommand{\plim}{\mathrm{plim}\thin}
+\newcommand\indep{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern5mu{#1#2}}}
+\newcommand{\notindep}{\ensuremath{\perp\!\!\!\!\!\!\diagup\!\!\!\!\!\!\perp}}%
+
+\newcommand{\mc}{\multicolumn}
+% weitere Optionen:
+% secbar: Gliederung im Kopf, nur sections (alternativ zu subsecbar)
+% handout: Produktion von Handouts, keine Animationen
+\definecolor{darkblue}{rgb}{0,.35,.62}
+\definecolor{lightblue}{rgb}{0.8,0.85,1}
+\definecolor{lightgrey}{gray}{0.1}	%Farben mischen
+
+%	kbordermatrix options
+
+
+\def\firstcircle{[name path=firstcircle] (0,0) circle (3cm)}
+\def\secondcircle{[name path=secondcircle] (55:3.11111cm) circle (3cm)} %No idea how the numbers selected work; they were derived from what I found online. They seem to function though!
+\def\thirdcircle{[name path=thirdcircle] (0:3.5cm) circle (3cm)}
+
+
+\definecolor{lightgrey}{gray}{0.90}	%Farben mischen
+\definecolor{grey}{gray}{0.85}
+\definecolor{darkgrey}{gray}{0.65}
+\definecolor{lightblue}{rgb}{0.8,0.85,1}
+
+\renewcommand{\arraystretch}{1.5}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\renewcommand*{\familydefault}{\sfdefault}
+
+\tikzset{forestyle/.style = {rectangle, thick, minimum width = 5cm, minimum height = 0.5cm, text width = 4.5cm, outer sep = 1mm},  
+  pre/.style={<-, shorten <=1pt, >=stealth, ultra thick},
+  extend/.style={<-,dashed, shorten <=1pt, >=stealth, ultra thick}}
+
+\setbeamertemplate{enumerate item}{\textbf{(\theenumi)}}
+\setbeamertemplate{enumerate subitem}{(\roman{enumii})}
+
+\makeatletter
+\newenvironment{cenumerate}{%
+  \enumerate
+  \setcounter{\@enumctr}{\csname saved@\@enumctr\endcsname}%
+}{%
+  \expandafter\xdef\csname saved@\@enumctr\endcsname{\the\value{\@enumctr}}%
+  \endenumerate
+}
+\newenvironment{cenumerate*}{%
+  \enumerate
+}{%
+  \expandafter\xdef\csname saved@\@enumctr\endcsname{\the\value{\@enumctr}}%
+  \endenumerate
+}
+\makeatother
+
+%-------------------------------------------------------------------------------
+% Full Justification
+%-------------------------------------------------------------------------------
+\usepackage{ragged2e}
+\usepackage{lipsum}
+\makeatletter
+\renewcommand{\itemize}[1][]{%
+  \beamer@ifempty{#1}{}{\def\beamer@defaultospec{#1}}%
+  \ifnum \@itemdepth >2\relax\@toodeep\else
+    \advance\@itemdepth\@ne
+    \beamer@computepref\@itemdepth% sets \beameritemnestingprefix
+    \usebeamerfont{itemize/enumerate \beameritemnestingprefix body}%
+    \usebeamercolor[fg]{itemize/enumerate \beameritemnestingprefix body}%
+    \usebeamertemplate{itemize/enumerate \beameritemnestingprefix body begin}%
+    \list
+      {\usebeamertemplate{itemize \beameritemnestingprefix item}}
+      {\def\makelabel##1{%
+          {%
+            \hss\llap{{%
+                \usebeamerfont*{itemize \beameritemnestingprefix item}%
+                \usebeamercolor[fg]{itemize \beameritemnestingprefix item}##1}}%
+          }%
+        }%
+      }
+  \fi%
+  \beamer@cramped%
+  \justifying% NEW
+  %\raggedright% ORIGINAL
+  \beamer@firstlineitemizeunskip%
+}

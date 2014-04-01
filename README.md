@@ -10,3 +10,9 @@ http://www.policy-lab.org/teaching/soft-engineering
 Contact:
 
 info@policy-lab.org
+
+To build the content of the repository, just call
+
+	python waf configure build
+
+in the root directory.

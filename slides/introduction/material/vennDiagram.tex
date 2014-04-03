@@ -1,0 +1,16 @@
+
+\begin{frame}\begin{center}\begin{tikzpicture}
+    \begin{scope}[fill opacity=.5, text opacity=1]
+    \fill[red] \firstcircle;  
+    \fill[green]\secondcircle;
+    \fill[blue]\thirdcircle;
+    \draw \firstcircle node[below,name=A] {};
+    \draw \secondcircle node [above,name=B] {};
+    \draw \thirdcircle node [below,name=C] {};
+    \node at ($0.4*(B)+0.3*(C)+0.3*(A)$) {Scientific}; 
+    \node at ($0.25*(B)+0.375*(C)+0.375*(A)$) {Computing};
+    \path (-1cm,-1cm) node {Programmer}
+    (1.75cm,3.5cm) node {Economist}
+    (4.5cm,-1cm) node {Econometrician};
+    \end{scope}
+\end{tikzpicture}\end{center}\end{frame}

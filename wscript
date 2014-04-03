@@ -55,6 +55,11 @@ def post_build(bld):
     shutil.copy(source, target)
 
 
+    source = '.bld/slides/git/main.pdf'
+    target = 'git-slides.pdf'
+
+    shutil.copy(source, target)
+
     source = '.bld/doc/syllabus/doc.pdf'
     target = 'syllabus.pdf'
 

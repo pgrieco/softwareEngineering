@@ -1,0 +1,94 @@
+\begin{frame}[fragile]
+\begin{center}\huge
+\verb+grmToolbox+
+\end{center}
+\end{frame}
+
+
+\begin{frame}\begin{center}
+	
+	\textbf{Reference}\\\vspace{0.3cm}
+    Eisenhauer, Philipp and James Heckman, Edward Vytlacil (2014): The Generalized Roy Model and the Cost-Benefit Analysis of Social Programs, \textit{Journal of Political Economy}, resubmitted.
+    \end{center}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+%	Generalized Roy Model
+%-------------------------------------------------------------------------------
+\begin{frame}
+\textbf{Generalized Roy Model}
+\begin{align*}
+\mc{2}{l}{\text{Potential Outcomes}}  &\mc{2}{l}{\text{Choice}}\\
+Y_1 & = \mu_1{(X)} + U_1 		& D & = \mathbbm{1}\left\{ S > 0 \right\}\\
+Y_0 & = \mu_0{(X)} + U_0 		& S & = Y_1 - Y_0 - C\\
+		&& C & = \mu_C(Z) + U_C\\
+\mc{2}{l}{\text{Observed Outcome}}  	&   & \\
+Y   & = D Y_1 + (1 - D)Y_0	  		    	&   &  \\
+\end{align*}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+%	Maximum Likelihood
+%-------------------------------------------------------------------------------
+\begin{frame}
+\textbf{Maximum Likelihood Estimation}\vspace{0.5cm}
+\begin{align*}
+\mathcal{L(\theta)}&= \prod_{0} \frac{1}{\sigma_{U_0}} \phi \left( \frac{Y_0  - x'\beta_0}{\sigma_{U_0}}\right)\\
+		     & \times\left( 1 - \Phi\left(\frac{z'\gamma - \rho_{U_0,V}(Y_0 - x'\beta_0)/\sigma_{U_0} }{\sqrt{1 - \rho_{U_0,V}}}\right)\right)\\
+	& \times\prod_{1} \frac{1}{\sigma_{U_1}} \phi \left( \frac{Y_1  - x'\beta_1}{\sigma_{U_1}}\right)\\
+		     & \times\Phi\left(\frac{z'\gamma - \rho_{U_1,V}(Y_1 - x'\beta_1)/\sigma_{U_1} }{\sqrt{1 - \rho_{U_1,V}}}\right)\\
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\textbf{Transparency, Recomputability, and Extendibility}
+
+\begin{center}\Large
+\href{http://www.policy-lab.org/grmToolbox}{http://www.policy-lab.org/grmToolbox}
+\end{center}
+
+\begin{itemize}
+\item Documentation\vspace{0.2cm}
+\begin{itemize}
+\item Source Code\vspace{0.2cm}
+\item Test Suite\vspace{0.2cm}
+\end{itemize}
+\item Download
+\end{itemize}
+
+\end{frame}
+
+
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+
+
+	\begin{frame}[fragile]
+		\begin{center}
+		\tikzstyle{Init} = [draw, ellipse,fill=black!20, node distance=3cm,
+    minimum height=2em, outer sep=3pt]
+		\tikzstyle{Level} = [text centered, text width=5cm,
+	     rounded corners, outer sep=3pt]
+
+		\begin{tikzpicture}
+			\node (cntr) {};
+			\node (init) [Init, above of=cntr, node distance=2.5cm] {Initialization File};
+			\node (est) [Level, left of=cntr, node distance=3cm] {\verb+grmToolbox-estimate+};
+			\node (sim) [Level, right of=cntr, node distance=3cm] {\verb+grmToolbox-simulate+};
+
+			\draw [-to,shorten >=-1pt,ultra thick] (init) -- (est); 		
+			\draw [-to,shorten >=-1pt,ultra thick] (init) -- (sim); 		
+		\end{tikzpicture}					
+		\end{center}
+	\end{frame}
+
+\begin{frame}[fragile]
+\textbf{Additional Commands}\vspace{0.3cm}
+\begin{itemize}
+\item \verb+grmToolbox-perturb+\vspace{0.2cm}
+\item \verb+grmToolbox-clean+\vspace{0.2cm}
+\item \verb+grmToolbox-terminate+
+\end{itemize}
+\end{frame}

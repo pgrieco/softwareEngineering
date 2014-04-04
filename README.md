@@ -15,4 +15,4 @@ To build the content of the repository, just call
 
 	python waf configure build
 
-in the root directory.
+in the root directory. Compiled versions of the presentations are also available in the dist folder.

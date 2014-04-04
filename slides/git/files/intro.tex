@@ -53,8 +53,8 @@
         fill=black!5]        
 
         \begin{tikzpicture}
-            \node [concept] (central) {Central Repository};
-            \node [concept, below of=central, node distance=3cm] (local) {Local Files};
+            \node [concept] (central) {Remote file system};
+            \node [concept, below of=central, node distance=3cm] (local) {Local file system};
             \node [example, right of=central, node distance=4cm] (cex) {Github Server};
             \node [example, right of=local, node distance=4cm] (lex) {Pam's Computer};
             \node [file,below of=central,xshift=0.8cm] (a) {\small File A};
@@ -181,4 +181,10 @@
         \item Non-linear project workflows
         \item Easily merge work from others
     \end{itemize}
+\end{frame}
+
+\begin{frame}[c]
+    \begin{center}
+        \Large Git
+    \end{center}
 \end{frame}

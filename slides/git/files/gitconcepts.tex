@@ -134,6 +134,12 @@
 	\colorbox{black}{\usebox{\mybox}}
 \end{frame}
 
+\begin{frame}[c]
+    \begin{center}
+        \Large Collaboration with Git
+    \end{center}
+\end{frame}
+
 \begin{frame}[t,fragile]\frametitle{Git Concepts}
 	David wishes to update his local files with the most
 	recent version from the Central Server (i.e. fast-forwarding
@@ -223,6 +229,12 @@
 	\vspace{0.5cm}
 	the changes upstream are \href{http://git-scm.com/book/en/Git-Basics-Working-with-Remotes}{fetched} from the Central Server and 
 	merged with the files in his working directory.
+\end{frame}
+
+\begin{frame}[c]
+    \begin{center}
+        \Large Branching
+    \end{center}
 \end{frame}
 
 \begin{frame}[c]\frametitle{Git Concepts}
@@ -390,6 +402,12 @@
     }
 \end{frame}
 
+\begin{frame}[c]
+    \begin{center}
+        \Large Merging
+    \end{center}
+\end{frame}
+
 \begin{frame}[c]\frametitle{Git Concepts}
 	We will not get into the details of merging, but
 	we can explore one example. Let's have Pam merge
@@ -529,43 +547,14 @@ $ git commit -m "Resolved conflict, iterating through long list"
     \colorbox{black}{\usebox{\mybox}}
 \end{frame}
 
-\begin{frame}[fragile]\frametitle{Git Concepts}
-    To view the difference between this and the last
-    commit, Pam uses the command 
-    \inlinecode{\$ git diff HEAD^ -- filea}
-
-    \begin{center} 
-        \begin{figure}[h!] \centering
-            \scalebox{0.45}{\includegraphics{figures/diff}}   
-        \end{figure}
-    \end{center}
-\end{frame}
-
-\begin{frame}[fragile]\frametitle{Git Concepts}
-    Because she has 
-    \href{http://stackoverflow.com/questions/3713765/viewing%
-    -all-git-diffs-with-vimdiff}{configured} 
-    Git to use a difftool, 
-    she also uses vimdiff with the command
-    \inlinecode{\$ git difftool HEAD^ -- filea}
-    for a side-by-side comparison.
-
-    \begin{center} 
-        \begin{figure}[h!] \centering
-            \scalebox{0.27}{\includegraphics{figures/difftool}}   
-        \end{figure}
-    \end{center}
-\end{frame}
-
-
 \begin{frame}[t]\frametitle{Git Concepts}
-	After the merge is complete, Pam's commit history in
-	her local repository looks like:
+    After the merge is complete, Pam's commit history in
+    her local repository looks like:
 
-	\vspace{0.5cm}
-	\tikzstyle{commit}=[draw, rectangle, text centered, text width=0.5cm,
+    \vspace{0.5cm}
+    \tikzstyle{commit}=[draw, rectangle, text centered, text width=0.5cm,
         fill=green!20, rounded corners]
-	\tikzstyle{branch}=[draw, rectangle, text centered, text width=1cm,
+    \tikzstyle{branch}=[draw, rectangle, text centered, text width=1cm,
         fill=white, rounded corners]
     \resizebox{5cm}{5cm}{%
     \begin{tikzpicture}
@@ -604,6 +593,34 @@ $ git commit -m "Resolved conflict, iterating through long list"
     }
 \end{frame}
 
+\begin{frame}[fragile]\frametitle{Git Concepts}
+    To view the difference between this and the last
+    commit, Pam uses the command 
+    \inlinecode{\$ git diff HEAD^ -- filea}
+
+    \begin{center} 
+        \begin{figure}[h!] \centering
+            \scalebox{0.45}{\includegraphics{figures/diff}}   
+        \end{figure}
+    \end{center}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Git Concepts}
+    Because she has 
+    \href{http://stackoverflow.com/questions/3713765/viewing%
+    -all-git-diffs-with-vimdiff}{configured} 
+    Git to use a difftool, 
+    she also uses vimdiff with the command
+    \inlinecode{\$ git difftool HEAD^ -- filea}
+    for a side-by-side comparison.
+
+    \begin{center} 
+        \begin{figure}[h!] \centering
+            \scalebox{0.27}{\includegraphics{figures/difftool}}   
+        \end{figure}
+    \end{center}
+\end{frame}
+
 \begin{frame}[c]
     \begin{center} \Large
         Framework For Understanding Git
@@ -617,15 +634,11 @@ $ git commit -m "Resolved conflict, iterating through long list"
 		\begin{itemize}
 			\item git directory (i.e. Gitland)
 			\item working directory (current, local state of files)
-
+            \item
 			The location of \framebox{HEAD} in your git directory
 			and any local file modifications determine the state
 			of your working directory
 		\end{itemize}
-		\item Git will restrict movement in the git directory
-		if the working directory is not clean (i.e. changes
-		are not saved to the git directory
-		with a commit)
 	\end{itemize}
 \end{frame}
 

@@ -1,0 +1,19 @@
+\begin{center}\vspace{0.5cm}
+\begin{tikzpicture}\small
+
+ \node (step1) at (0,1) [forestyle] {\textbf{Fit} economic model to \\ \textit{observed} data.};
+ \node (estimated) at (5,1)  {$\hat{\psi}^{obs}$}
+  edge [extend] (step1);
+ 
+ \node (step2) at (0, -1.0)[forestyle] {\textbf{Simulate} synthetic dataset using estimates.}
+  edge [pre] (step1);
+ 
+ \node (step3) at (0, -3) [forestyle] {\textbf{Fit} economic model to \\\textit{synthetic} data.}
+  edge [pre] (step2);;
+ \node (synthetic) at (5,-3) {$\hat{\psi}^{syn}$}
+  edge [extend] (step3)
+  edge [<->, ultra thick, bend right = 45, >=stealth] node[auto,swap] (compare) {Compare} (estimated);
+
+ 
+\end{tikzpicture}
+\end{center}

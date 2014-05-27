@@ -1,7 +1,7 @@
 Practical Computing for Economists
 ==================================
 
-This repository contains the class material on ``Software Engineering''  and ``Recomputability'' by Philipp Eisenhauer and Jake Torcasso.
+This repository contains the class material on ``Software Engineering'' by Philipp Eisenhauer and Jake Torcasso.
 
 Homepages:
 

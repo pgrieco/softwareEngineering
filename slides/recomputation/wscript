@@ -1,0 +1,15 @@
+
+# imports
+import os
+
+def build(bld):
+
+	os.chdir('slides/recomputation')	
+
+	bld.add_group(); bld(features = 'tex', type = 'pdflatex', source = 'doc.tex', prompt = False)
+	
+	bld.add_group(); bld(features = 'tex', type = 'bibtex', source = 'doc.tex', prompt = False)
+	
+	bld.add_group(); bld(features = 'tex', type = 'pdflatex', source = 'doc.tex', prompt = False)
+
+	os.chdir('../../')

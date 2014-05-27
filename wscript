@@ -65,6 +65,11 @@ def post_build(bld):
 
     shutil.copy(source, target)
 
+    source = '.bld/slides/recomputation/doc.pdf'
+    target = 'recomputation-slides.pdf'
+
+    shutil.copy(source, target)
+
 def remove_for_distclean(path):
     ''' Remove path, where path can be either a directory or a file. The
         appropriate function is selected. Note, however, that if an 

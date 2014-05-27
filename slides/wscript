@@ -5,5 +5,6 @@ import os
 def build(bld):
 
 	bld.recurse('introduction')
+	bld.recurse('recomputation')
 	bld.recurse('git')
 

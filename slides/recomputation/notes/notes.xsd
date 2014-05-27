@@ -1,0 +1,86 @@
+<notes>
+<!-- ####################################################################### --> 
+<!-- ####################################################################### --> 
+<note number="1">
+    
+    This class
+
+    This lecture
+
+      What is this presentation about? basic software engineering
+      
+      What is that? application of tools from engineering to the desing and maintenance of software
+ 
+    Why do we care? 
+      1) Transparency and Recomputatbility
+      2) Reliability
+      3) Extendible
+
+    This presentation:
+
+      1) Best Practices
+      2) TOols
+      3) Examples
+
+    Jake TOrcasso.
+
+    resources, this presentation in class repo, but also webiste
+
+</note>
+<!-- ####################################################################### --> 
+<note number="13">
+    if you want to do all that, can turn out to be a nightmare!
+</note>
+<!-- ####################################################################### --> 
+<note number="14">
+
+    open source, licencing
+
+    check out the details of the source code, can be frightening as well ;)
+
+</note>
+<!-- ####################################################################### --> 
+<note number="27">
+    V as composite unobservable
+</note>
+<!-- ####################################################################### --> 
+<note number="29">
+    got to documentation show github repo and release.
+
+    Example of parameter managements.
+
+</note>
+<!-- ####################################################################### --> 
+<note number="30">
+    example of separation of roles, show initialization file.
+</note>
+<!-- ####################################################################### --> 
+<note number="31">
+      now show how these commands can ease a workflow that improves the reliability
+</note>
+<!-- ####################################################################### --> 
+<note number="32">
+       Show monte carlo exercise in the toolbox.
+</note>
+<!-- ####################################################################### --> 
+<note number="35">
+
+    This presentation
+      1) Best Practices
+      2) Tools
+      3) Examples
+      
+    Why do we care? 
+      1) Transparency and Recomputatbility
+      2) Reliability
+      3) Extendible
+
+
+</note>
+<!-- ####################################################################### --> 
+<note number="37">
+      webiste with material (including slides), feedback, mailing list.
+</note> 
+<!-- ####################################################################### --> 
+<!-- ####################################################################### --> 
+</notes>

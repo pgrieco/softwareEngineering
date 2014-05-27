@@ -3,11 +3,9 @@ Practical Computing for Economists
 
 This repository contains the class material on ``Software Engineering'' by Philipp Eisenhauer and Jake Torcasso.
 
-Homepages:
+Homepage:
 
 http://www.policy-lab.org/teaching/soft-engineering
-
-http://www.policy-lab.org/teaching/recomputation
 
 Contact:
 

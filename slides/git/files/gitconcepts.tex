@@ -30,6 +30,7 @@
 			\item reverting changes
 		\end{itemize}
 	\end{itemize}
+	
 \end{frame}
 
 \begin{frame}[t,fragile]\frametitle{Git Concepts}
@@ -593,6 +594,13 @@ $ git commit -m "Resolved conflict, iterating through long list"
     }
 \end{frame}
 
+\begin{frame}[c]
+    \begin{center}
+        \Large Comparing Commits
+    \end{center}
+\end{frame}
+
+
 \begin{frame}[fragile]\frametitle{Git Concepts}
     To view the difference between this and the last
     commit, Pam uses the command 
@@ -620,6 +628,47 @@ $ git commit -m "Resolved conflict, iterating through long list"
         \end{figure}
     \end{center}
 \end{frame}
+
+\begin{frame}[c]
+    \begin{center}
+        \Large Remote Repository Hosting
+    \end{center}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Remote Repository Hosting}
+\begin{itemize}
+  \item   When you use \inlinecode{\$ git push origin master} you push your latest commit pointed to by branch ``master'' to the remote server ``origin''
+  \item ``origin'' may be, 
+  \begin{enumerate}
+     \item Another directory on your computer. 
+     \item Another computer that you maintain. 
+     \item A web based repository hosting service (bitbucket.org, github.com).
+  \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Remote Repository Hosting}
+Using a hosting service:
+\begin{itemize}
+\item Makes it easier to collaborate or disseminate your work.
+\item Connects you to a community.  
+\item Ensures yourself against hardware failure. 
+\end{itemize}
+The web is full of comments on the github v. bitbucket debate. Both seem good to me.
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Remote Repository Hosting}
+Setting up remote hosting
+\begin{enumerate}
+\item Create a user account, (here username is pgri). 
+\item Create an empty repository, (here repo name is mrepo).  
+\item Clone repository to your local computer:  \inlinecode{\$ git clone https://pgri@bitbucket.org/pgri/mrepo.git} 
+\item Copy in files, add them, commit them. 
+\item Push first commit back to remote. 
+\end{enumerate}
+You can also give permission to other users to read (pull) and write (push) to your repository.
+\end{frame}
+
 
 \begin{frame}[c]
     \begin{center} \Large
@@ -695,7 +744,7 @@ $ git commit -m "Resolved conflict, iterating through long list"
     \href{http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide}{post} is a great resource for beginners and advanced users alike.
 \end{frame}
 
-\begin{frame}
-	Now \textbf{learn} Git so you can \textbf{forget} about
-	versioning and move-on with research!
-\end{frame}
+%\begin{frame}
+%	Now \textbf{learn} git so you can \textbf{forget} about
+%	versioning and move-on with research!
+%\end{frame}

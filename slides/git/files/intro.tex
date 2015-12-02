@@ -4,10 +4,12 @@
     \frametitle{Starting Point}
 
     \begin{itemize}
-        \item A collection of files on your computer
+        \item A collection of files on your computer (data, code, notes, ...)
         \item Changes to files and new files over time
         \item Interested in preserving the history 
         of these changes
+        \item Want to be able to share work across users \& systems.
+        \item Want to work on pieces in parallel without corrupting code.
     \end{itemize}
 \end{frame}
 
@@ -29,6 +31,7 @@
         \item The modern Bible scribe
         \begin{itemize}
             \item Copy/paste versions to an archive
+            \item File name tags for different versions: \\ \url{mainFile_addingKrogerRobustness_fixedError_20130211.m}
             \item Include a readme
         \end{itemize}
         \item Post-modern methods of Version Control
@@ -43,35 +46,36 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}[c]\frametitle{Concepts of Version Control Systems}
-    \begin{center}
-        \tikzstyle{concept}=[draw, rectangle, text centered, text width=2.5cm,
-        fill=black!20, rounded corners]
-        \tikzstyle{example}=[draw, rectangle, text centered, text width=3cm,
-        fill=black!10, rounded corners]
-        \tikzstyle{file}=[draw, rectangle, text centered, text width=1cm,
-        fill=black!5]        
-
-        \begin{tikzpicture}
-            \node [concept] (central) {Remote file system};
-            \node [concept, below of=central, node distance=3cm] (local) {Local file system};
-            \node [example, right of=central, node distance=4cm] (cex) {Github Server};
-            \node [example, right of=local, node distance=4cm] (lex) {Pam's Computer};
-            \node [file,below of=central,xshift=0.8cm] (a) {\small File A};
-            \node [file,below of=a] (b) {\small File B};
-
-            \draw [dotted, <->, thick] (central) -- (local);
-            \draw [dotted] (central) -- (cex);
-            \draw [dotted] (local) -- (lex);
-
-        \end{tikzpicture}        
-    \end{center}
-\end{frame}
+%\begin{frame}[c]\frametitle{Concepts of Version Control Systems}
+%    \begin{center}
+%        \tikzstyle{concept}=[draw, rectangle, text centered, text width=2.5cm,
+%        fill=black!20, rounded corners]
+%        \tikzstyle{example}=[draw, rectangle, text centered, text width=3cm,
+%        fill=black!10, rounded corners]
+%        \tikzstyle{file}=[draw, rectangle, text centered, text width=1cm,
+%        fill=black!5]        
+%
+%        \begin{tikzpicture}
+%            \node [concept] (central) {Remote file system};
+%            \node [concept, below of=central, node distance=3cm] (local) {Local file system};
+%            \node [example, right of=central, node distance=4cm] (cex) {Github Server};
+%            \node [example, right of=local, node distance=4cm] (lex) {Pam's Computer};
+%            \node [file,below of=central,xshift=0.8cm] (a) {\small File A};
+%            \node [file,below of=a] (b) {\small File B};
+%
+%            \draw [dotted, <->, thick] (central) -- (local);
+%            \draw [dotted] (central) -- (cex);
+%            \draw [dotted] (local) -- (lex);
+%
+%        \end{tikzpicture}        
+%    \end{center}
+%\end{frame}
 
 \begin{frame}[c]\frametitle{Distributional Version Control Systems}
     \begin{itemize}
         \item Network of repository copies (mirrors)
         \item Identical, full copies of the data
+        \item Remote storage in the cloud (github, bitbucket)
     \end{itemize}        
 \end{frame}
 
@@ -103,13 +107,6 @@
     \begin{minipage}[b]{0.4\paperwidth}
         \raggedleft
         \begin{itemize}
-            \item Dissemenation
-                \begin{itemize}
-                    \item Availability
-                    \item Reproducibility
-                    \item Transparency
-                    \item Extendability
-                \end{itemize}
             \item Organization
                 \begin{itemize}
                     \item Contemporaneity
@@ -121,7 +118,14 @@
                     \item Security
                     %backup, access
                 \end{itemize}
-            \item Collaboration
+            \item Dissemenation
+                \begin{itemize}
+                    \item Availability
+                    \item Reproducibility
+                    \item Transparency
+                    \item Extendability
+                \end{itemize}
+             \item Collaboration
                 \begin{itemize}
                     \item Visibility
                     %oversight, logging, responsibility, part and the whole
@@ -133,6 +137,18 @@
     \end{minipage}
 \end{frame}
 \restoregeometry
+
+\begin{frame}\frametitle{Organization}
+    \begin{itemize}
+        \item Always stay up-to-date, always have a backup
+        \item Explore alternative workflows--diverge and converge
+        \item Branching Workflow--\href{http://git-scm.com/book/en/Git-Branching}{at ease with experimentation}
+        \item Quickly compare and merge versions 
+        \item Retain an (annotated) \href{http://git-scm.com/book/en/Git-Basics-Viewing-the-Commit-History}{historical record} of your work
+        \item Manage \href{http://git-scm.com/book/en/Git-Internals-Transfer-Protocols}{access rights}
+    \end{itemize}
+\end{frame}
+
 
 \begin{frame}
     \frametitle{Dissemenation}
@@ -153,15 +169,6 @@
     You'll believe me if you go on \href{https://github.com/}{Github.com}.
 \end{frame}
 
-\begin{frame}\frametitle{Organization}
-    \begin{itemize}
-        \item Always stay up-to-date
-        \item Explore alternative workflows--diverge and converge
-        \item Chill pill--\href{http://git-scm.com/book/en/Git-Branching}{at ease with experimentation}
-        \item Retain an (annotated) \href{http://git-scm.com/book/en/Git-Basics-Viewing-the-Commit-History}{historical record} of your work
-        \item Manage \href{http://git-scm.com/book/en/Git-Internals-Transfer-Protocols}{access rights}
-    \end{itemize}
-\end{frame}
 
 \begin{frame}\frametitle{Collaboration}
     \begin{itemize}
